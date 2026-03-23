@@ -104,7 +104,11 @@ defmodule Plausible.Stats.SQL.SpecialMetrics do
         order_by: [],
         include_imported: query.include_imported,
         preloaded_goals: Map.put(query.preloaded_goals, :matching_toplevel_filters, []),
-        pagination: nil
+        pagination: nil,
+        # Smearing spreads session visitors across every time bucket the session
+        # was active in. For conversion rate we need unsmeared counts
+        # (one visitor counted exactly once per time bucket they were seen in)
+        bypass_session_smearing?: true
       )
 
     from(e in subquery(q),
