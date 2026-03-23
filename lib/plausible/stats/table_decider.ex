@@ -110,9 +110,15 @@ defmodule Plausible.Stats.TableDecider do
   #   the length of the session, not just when events occurred or when session started.
   #   For this reason, we smear the session metrics across the length of the session.
   #   See `time_slots` usage in `Plausible.Stats.SQL.Expression` to understand how this is done.
+  #
+  # Smearing must be suppressed when :group_conversion_rate is in the query
+  # or when query.bypass_session_smearing? is true (used by group_conversion_rate
+  # totals subquery).
   @smearable_metrics [:visitors, :visits]
   defp smear_session_metrics({:sessions, metrics} = value, query) do
-    if "time:minute" in query.dimensions or "time:hour" in query.dimensions do
+    if ("time:minute" in query.dimensions or "time:hour" in query.dimensions) and
+         :group_conversion_rate not in query.metrics and
+         not query.bypass_session_smearing? do
       # Split metrics into two groups: one with visitors and visits, and the remaining ones
       {smearable_metrics, session_metrics} = Enum.split_with(metrics, &(&1 in @smearable_metrics))
 
