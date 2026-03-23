@@ -126,6 +126,31 @@ defmodule Plausible.Stats.QueryTest do
     end
   end
 
+  describe "active session smearing on time:minute graphs" do
+    test "active sessions (last event within 30 min) are smeared through current time, not just last event",
+         %{site: site} do
+      now = ~U[2024-01-01 12:00:00Z]
+
+      populate_stats(site, [
+        # Visitor had an event 5 minutes ago - session is still active (within 30 min timeout)
+        build(:pageview, user_id: @user_id, timestamp: ~N[2024-01-01 11:55:00])
+      ])
+
+      {:ok, query} =
+        QueryBuilder.build(site, %ParsedQueryParams{
+          metrics: [:visitors],
+          input_date_range: :realtime_30m,
+          dimensions: ["time:minute"],
+          now: now
+        })
+
+      %Stats.QueryResult{results: results} = Stats.query(site, query)
+
+      # The current minute (12:00) should show the visitor since their session is still active
+      assert %{dimensions: ["2024-01-01 12:00:00"], metrics: [1]} in results
+    end
+  end
+
   describe "session smearing respects query date range boundaries" do
     test "time:hour does not include buckets from outside the query range",
          %{site: site} do

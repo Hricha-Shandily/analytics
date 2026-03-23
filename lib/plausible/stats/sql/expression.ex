@@ -33,7 +33,7 @@ defmodule Plausible.Stats.SQL.Expression do
         """
         timeSlots(
           toTimeZone(greatest(?, ?), ?),
-          toUInt32(timeDiff(greatest(?, ?), least(?, ?))),
+          toUInt32(timeDiff(greatest(?, ?), least(if(timeDiff(?, ?) < 1800, ?, ?), ?))),
           toUInt32(?)
         )
         """,
@@ -42,6 +42,9 @@ defmodule Plausible.Stats.SQL.Expression do
         ^unquote(query).timezone,
         s.start,
         ^unquote(first),
+        s.timestamp,
+        ^unquote(query).now,
+        ^unquote(query).now,
         s.timestamp,
         ^unquote(last),
         ^unquote(period_in_seconds)
