@@ -287,7 +287,8 @@ defmodule Plausible.Stats.SQL.QueryBuilder do
   end
 
   defp select_from(dimension, query, queries) do
-    smeared? = Enum.any?(queries, fn {_table_type, query, _q} -> query.smear_session_metrics end)
+    smeared? =
+      Enum.any?(queries, fn {_table_type, query, _q} -> query.session_smearing_applied? end)
 
     cond do
       query.sql_join_type == :left -> :leftmost_table

@@ -30,7 +30,8 @@ defmodule Plausible.Stats.Query do
             # Contains information to determine how to combine legacy and new time on page metrics
             time_on_page_data: %{},
             sql_join_type: :left,
-            smear_session_metrics: false
+            session_smearing_applied?: false,
+            bypass_session_smearing?: false
 
   require OpenTelemetry.Tracer, as: Tracer
 

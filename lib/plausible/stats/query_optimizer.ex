@@ -200,7 +200,7 @@ defmodule Plausible.Stats.QueryOptimizer do
   defp build_split_query(:sessions_smeared, metrics, query) do
     {_, query} = build_split_query(:sessions, metrics, query)
 
-    {:sessions, Query.set(query, smear_session_metrics: true)}
+    {:sessions, Query.set(query, session_smearing_applied?: true)}
   end
 
   on_ee do

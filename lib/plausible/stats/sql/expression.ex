@@ -114,7 +114,8 @@ defmodule Plausible.Stats.SQL.Expression do
     })
   end
 
-  def select_dimension(q, key, "time:hour", :sessions, query) when query.smear_session_metrics do
+  def select_dimension(q, key, "time:hour", :sessions, query)
+      when query.session_smearing_applied? do
     # :TRICKY: ClickHouse timeSlots works off of unix epoch and is not
     #   timezone-aware. This means that for e.g. Asia/Katmandu (GMT+5:45)
     #   to work, we divide time into 15-minute buckets and later combine these
@@ -140,7 +141,7 @@ defmodule Plausible.Stats.SQL.Expression do
 
   # :NOTE: This is not exposed in Query APIv2
   def select_dimension(q, key, "time:minute", :sessions, query)
-      when query.smear_session_metrics do
+      when query.session_smearing_applied? do
     {first, last} = Time.utc_boundaries(query)
 
     q
@@ -435,7 +436,7 @@ defmodule Plausible.Stats.SQL.Expression do
     })
   end
 
-  def session_metric(:visits, query) when query.smear_session_metrics do
+  def session_metric(:visits, query) when query.session_smearing_applied? do
     wrap_alias([s], %{
       visits: scale_sample(fragment("uniq(?)", s.session_id))
     })
