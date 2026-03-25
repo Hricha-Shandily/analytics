@@ -19,7 +19,7 @@
 
 We are dedicated to making web analytics more privacy-friendly. Our mission is to reduce corporate surveillance by providing an alternative web analytics tool which doesn’t come from the AdTech world. We are completely independent and solely funded by our subscribers.
 
-![Plausible Analytics](https://plausible.io/docs/img/plausible-analytics.png)
+![Plausible Analytics](.github/plausible-analytics-dashboard.webp)
 
 ## Why Plausible?
 
