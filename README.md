@@ -13,7 +13,7 @@
     <br /><br />
 </p>
 
-[Plausible Analytics](https://plausible.io/) is an open source, privacy-first web analytics tool. Lightweight, cookie-free alternative to Google Analytics. Available in managed cloud or self-hosted community edition.
+[Plausible Analytics](https://plausible.io/) is an open source, privacy-first web analytics tool. Lightweight, cookie-free [alternative to Google Analytics](https://plausible.io/blog/remove-google-analytics). Available in managed cloud or self-hosted community edition.
 
 - 🔐 [Privacy-focused](https://plausible.io/privacy-focused-web-analytics)
 - 🛡️ [GDPR, CCPA, PECR compliant](https://plausible.io/data-policy)
@@ -61,17 +61,26 @@ Interested to learn more? [Read more on our website](https://plausible.io), lear
 
 ## Why is Plausible Analytics Cloud not free like Google Analytics?
 
-Plausible Analytics is an independently owned and actively developed project. To keep the project development going, to stay in business, to continue putting effort into building a better product and to cover our costs, we need to charge a fee.
+Plausible is an independent, open source project funded entirely by our users. We charge a subscription to sustainably develop, maintain and improve the product over the long term.
 
-Google Analytics is free because Google has built their company and their wealth by collecting and analyzing huge amounts of personal information from web users and using these personal and behavioral insights to sell advertisements.
+Google Analytics is free to use because Google monetizes user data for advertising. That model comes with trade-offs: data collection, complexity and additional overhead for compliance and consent.
 
-Plausible has no part in that business model. No personal data is being collected and analyzed either. With Plausible, you 100% own and control all of your website data. This data is not being shared with or sold to any third-parties.
+With Plausible, the business model is simple:
 
-We choose the subscription business model rather than the business model of surveillance capitalism. See reasons why we believe you should [stop using Google Analytics on your website](https://plausible.io/blog/remove-google-analytics).
+- No data collection beyond aggregated, anonymized stats  
+- No third-party data sharing  
+- No advertising or tracking ecosystem  
+- You fully own and control your data  
+
+We believe paying for analytics should be straightforward. You pay for a product, not with your users’ data, but with a transparent subscription. [Learn more](https://plausible.io/paid-analytics-vs-free-ga).
 
 ## Getting started with Plausible
 
-The easiest way to get started with Plausible Analytics is with [our official managed service in the cloud](https://plausible.io/#pricing). It takes 2 minutes to start counting your stats with a worldwide CDN, high availability, backups, security and maintenance all done for you by us.
+The easiest way to get started with Plausible Analytics is with [our official managed service in the cloud](https://plausible.io/register).
+
+- Takes ~2 minutes to set up  
+- Global CDN, high availability, backups and security included  
+- No maintenance required
 
 In order to be compliant with the GDPR and the Schrems II ruling, all visitor data for our managed service in the cloud is exclusively processed on servers and cloud infrastructure owned and operated by European providers. Your website data never leaves the EU.
 
@@ -100,8 +109,13 @@ Our only source of funding is our premium, managed service for running Plausible
  
 ## Technology
 
-Plausible Analytics is a standard Elixir/Phoenix application backed by a PostgreSQL database for general data and a Clickhouse
-database for stats. On the frontend we use [TailwindCSS](https://tailwindcss.com/) for styling and React to make the dashboard interactive.
+Plausible is built with a modern, scalable stack:
+
+- **Backend**: Elixir + Phoenix  
+- **Databases**: PostgreSQL (general data), ClickHouse (analytics)  
+- **Frontend**: React + [TailwindCSS](https://tailwindcss.com/)  
+
+Our architecture allows Plausible to handle large volumes of traffic efficiently while keeping the dashboard fast and responsive.
 
 ## Contributors
 
@@ -113,7 +127,7 @@ For anyone wishing to contribute to Plausible, we recommend taking a look at [ou
 
 We welcome feedback from our community. We have a public roadmap driven by the features suggested by the community members. Take a look at our [feedback board](https://plausible.io/feedback). Please let us know if you have any requests and vote on open issues so we can better prioritize.
 
-To stay up to date with all the latest news and product updates, make sure to follow us on [X (formerly Twitter)](https://twitter.com/plausiblehq), [LinkedIn](https://www.linkedin.com/company/plausible-analytics/) or [Mastodon](https://fosstodon.org/@plausible).
+To stay up to date with all the latest news and product updates, make sure to follow us on [X (formerly Twitter)](https://twitter.com/plausiblehq), [Bluesky](https://bsky.app/profile/plausible.io), [LinkedIn](https://www.linkedin.com/company/plausible-analytics/) and [Mastodon](https://fosstodon.org/@plausible).
 
 ## License & Trademarks
 
