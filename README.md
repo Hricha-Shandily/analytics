@@ -27,19 +27,37 @@
 
 Here's what makes Plausible a great Google Analytics alternative and why we're trusted by thousands of paying subscribers to deliver their website and business insights:
 
-- **Clutter Free**: Plausible Analytics provides [simple web analytics](https://plausible.io/simple-web-analytics) and it cuts through the noise. No layers of menus, no need for custom reports. Get all the important insights on one single page. No training necessary.
-- **GDPR/CCPA/PECR compliant**: Measure traffic, not individuals. No personal data or IP addresses are ever stored in our database. We don't use cookies or any other persistent identifiers. [Read more about our data policy](https://plausible.io/data-policy)
-- **Lightweight**: Plausible Analytics works by loading a script on your website, like Google Analytics. Our script is [small](https://plausible.io/lightweight-web-analytics), making your website quicker to load. You can also send events directly to our [events API](https://plausible.io/docs/events-api).
-- **Email or Slack reports**: Keep an eye on your traffic with weekly and/or monthly email or Slack reports. You can also get traffic spike notifications.
-- **Invite team members and share stats**: You have the option to be transparent and open your web analytics to everyone. Your website stats are private by default but you can choose to make them public so anyone with your custom link can view them. You can [invite team members](https://plausible.io/docs/users-roles) and assign user roles too.
-- **Define key goals and track conversions**: Create custom events with custom dimensions to track conversions and attribution to understand and identify the trends that matter. Track ecommerce revenue, outbound link clicks, form completions, file downloads and 404 error pages. Increase conversions using funnel analysis.
-- **Search keywords**: Integrate your dashboard with Google Search Console to get the most accurate reporting on your search keywords.
-- **SPA support**: Plausible is built with modern web frameworks in mind and it works automatically with any pushState based router on the frontend. We also support frameworks that use the URL hash for routing. See [our documentation](https://plausible.io/docs/hash-based-routing).
-- **Smooth transition from Google Analytics**: There's a realtime dashboard, entry pages report and integration with Search Console. You can track your paid campaigns and conversions. You can invite team members. You can even [import your historical Google Analytics stats](https://plausible.io/docs/google-analytics-import) and there's [a Google Tag Manager template](https://plausible.io/gtm-template) too. Learn how to [get the most out of your Plausible experience](https://plausible.io/docs/your-plausible-experience) and join thousands who have already migrated from Google Analytics.
+- **Clutter-free**  
+  Plausible provides [simple web analytics](https://plausible.io/simple-web-analytics) that cut through the noise. No layers of menus or need to create custom reports. All key insights are on a single page, with no training required.
 
-We are dedicated to making web analytics more privacy-friendly. Our mission is to reduce corporate surveillance by providing an alternative web analytics tool which doesn’t come from the AdTech world. We are completely independent and solely funded by our subscribers.
+- **Privacy-first and compliant**  
+  Measure traffic, not individuals. No personal data or IP addresses are stored, and no cookies or persistent identifiers are used. Fully compliant with GDPR, CCPA and PECR.  
+  [Read more about our data policy](https://plausible.io/data-policy)
 
-Interested to learn more? [Read more on our website](https://plausible.io), learn more about the team and the goals of the project on [our about page](https://plausible.io/about) or explore [the documentation](https://plausible.io/docs). 
+- **Lightweight**  
+  Our script is [tiny](https://plausible.io/lightweight-web-analytics), helping your website load faster. You can also send events directly to our [events API](https://plausible.io/docs/events-api).
+
+- **Built for modern workflows**  
+  Works with modern frameworks and supports SPAs out of the box, including pushState and hash-based routing.  
+  See the [documentation](https://plausible.io/docs/hash-based-routing) for details.
+
+- **Define key goals and track conversions**  
+  Track goals, conversions, revenue attribution and funnels using custom events and dimensions. Turn on codeless tracking for outbound link clicks, form completions, file downloads and 404 error pages.
+
+- **Easy reporting and sharing**  
+  Get weekly or monthly reports via email or Slack, including traffic spike/drop notifications. Share dashboards publicly or [invite team members](https://plausible.io/docs/users-roles) with role-based access.
+
+- **Search insights included**  
+  Integrate with Google Search Console to get accurate keyword data directly in your dashboard.
+
+- **Smooth transition from Google Analytics**  
+  Familiar metrics, real-time dashboard, campaign tracking and Search Console integration. [Import your historical Google Analytics stats](https://plausible.io/docs/google-analytics-import) and continue where you    left off.
+
+Thousands of teams use Plausible to understand their traffic without sacrificing privacy or simplicity. Learn how to [get the most out of your Plausible experience](https://plausible.io/docs/your-plausible-experience).
+
+We are dedicated to making web analytics more privacy-friendly. Our mission is to reduce corporate surveillance by providing an alternative web analytics tool which doesn’t come from the AdTech world. We are completely independent and solely funded by our subscribers.  
+
+Interested to learn more? [Read more on our website](https://plausible.io), learn more about the team and our goals on [our about page](https://plausible.io/about) or explore [the documentation](https://plausible.io/docs). 
 
 ## Why is Plausible Analytics Cloud not free like Google Analytics?
 
