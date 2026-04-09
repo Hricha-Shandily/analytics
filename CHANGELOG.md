@@ -6,12 +6,14 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Allow querying revenue metrics (`total_revenue`, `average_revenue`) with visit dimensions in Stats API v2
 - Allow querying `views_per_visit` with a time dimension in Stats API
 - Add `bounce_rate` to page-filtered Top Stats even when imports are included, but render a metric warning about imported data not included in `bounce_rate` tooltip.
-- Add `time_on_page` to page-filtered Top Stats even when imports are included, unless legacy time on page is in view. 
+- Add `time_on_page` to page-filtered Top Stats even when imports are included, unless legacy time on page is in view.
 - Adds team_id to query debug metadata (saved in system.query_log log_comment column)
 - Add "Unknown" option to Countries shield, for when the country code is unrecognized
 - Add "Last 24 Hours" to dashboard time range picker and Stats API v2
+- Always compare against the same time range in comparisons with "Today"
 
 ### Removed
 
@@ -19,12 +21,15 @@ All notable changes to this project will be documented in this file.
 
 - Keybind hints are hidden on smaller screens
 - Site index is sortable alphanumerically and by traffic
+- "Top referrers" and "Search terms" breakdowns are rendered side by side with other "Sources" tabs instead of replacing them
 
 ### Fixed
 
+- Validate empty filter clauses list in Stats API v2
 - Fixed Stats API timeseries returning time buckets falling outside the queried range
 - Fixed issue with all non-interactive events being counted as interactive
 - Fixed countries map countries staying highlighted on Chrome
+- Fixed comparison tooltip in the top pages report missing date labels
 
 ## v3.2.0 - 2026-01-16
 
