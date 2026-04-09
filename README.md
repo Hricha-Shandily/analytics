@@ -38,20 +38,25 @@ Here's what makes Plausible a great Google Analytics alternative and why we're t
   Our script is [tiny](https://plausible.io/lightweight-web-analytics), helping your website load faster. You can also send events directly to our [events API](https://plausible.io/docs/events-api).
 
 - **Built for modern workflows**  
-  Works with modern frameworks and supports SPAs out of the box, including pushState and hash-based routing.  
-  See the [documentation](https://plausible.io/docs/hash-based-routing) for details.
+  Works with modern frameworks and supports SPAs out of the box, including pushState and hash-based routing. See [details](https://plausible.io/docs/hash-based-routing).
 
 - **Define key goals and track conversions**  
   Track goals, conversions, revenue attribution and funnels using custom events and dimensions. Turn on codeless tracking for outbound link clicks, form completions, file downloads and 404 error pages.
 
 - **Easy reporting and sharing**  
-  Get weekly or monthly reports via email or Slack, including traffic spike/drop notifications. Share dashboards publicly or [invite team members](https://plausible.io/docs/users-roles) with role-based access.
+  Get weekly or monthly reports via email or Slack, including traffic spike/drop notifications. [Invite team members](https://plausible.io/docs/users-roles) with role-based access, share dashboards publicly or with anyone using a simple link. Make your analytics transparent by default.
 
 - **Search insights included**  
   Integrate with Google Search Console to get accurate keyword data directly in your dashboard.
 
+- **API and integrations**  
+  Send events directly via our API and export your stats using the stats API or CSV. Build custom workflows and integrations on top of your data.
+
+- **Real-time insights**  
+  Monitor live traffic and understand what’s happening on your site as it happens.
+
 - **Smooth transition from Google Analytics**  
-  Familiar metrics, real-time dashboard, campaign tracking and Search Console integration. [Import your historical Google Analytics stats](https://plausible.io/docs/google-analytics-import) and continue where you    left off.
+  Familiar metrics, campaign tracking and Search Console integration. Import your historical Google Analytics stats and continue where you left off.
 
 Thousands of teams use Plausible to understand their traffic without sacrificing privacy or simplicity. Learn how to [get the most out of your Plausible experience](https://plausible.io/docs/your-plausible-experience).
 
